@@ -37,11 +37,14 @@ OpenSTDroid Packages | Description
 ----------------------------- | -----------
 [android-manifest](https://github.com/STMicroelectronics/android-manifest) | STM32MPU Embedded Software for Android overall manifest
 [device-stm-bootloader](https://github.com/STMicroelectronics/device-stm-bootloader.git) | BSP (TF-A and U-Boot bootloader)
+[stm32-ddr-phy-binary](https://github.com/STMicroelectronics/stm32-ddr-phy-binary.git) | DDR firmware binaries
+[fiptool](https://github.com/STMicroelectronics/fiptool.git) | FIP generation tool
 [device-stm-kernel](https://github.com/STMicroelectronics/device-stm-kernel.git) | BSP (Linux kernel)
 [device-stm-tee](https://github.com/STMicroelectronics/device-stm-tee.git) | BSP (OP-TEE)
 [device-stm-openocd](https://github.com/STMicroelectronics/device-stm-openocd.git) | BSP (openocd for debug)
 [device-stm-common](https://github.com/STMicroelectronics/device-stm-common.git) | STM32MPU configuration
 [device-stm-eval](https://github.com/STMicroelectronics/device-stm-eval.git) | STM32MPU evaluation board configuration
+[device-stm-dk](https://github.com/STMicroelectronics/device-stm-dk.git) | STM32MPU discovery board configuration
 [hardware-peripheral-allocator](https://github.com/STMicroelectronics/hardware-peripheral-allocator.git) | allocator hardware interface
 [hardware-peripheral-audio](https://github.com/STMicroelectronics/hardware-peripheral-audio.git) | audio hardware interface
 [hardware-peripheral-camera](https://github.com/STMicroelectronics/hardware-peripheral-camera.git) | camera hardware interface
@@ -53,6 +56,9 @@ OpenSTDroid Packages | Description
 [hardware-peripheral-thermal](https://github.com/STMicroelectronics/hardware-peripheral-thermal.git) | thermal hardware interface
 [hardware-peripheral-usb](https://github.com/STMicroelectronics/hardware-peripheral-usb.git) | usb hardware interface
 [hardware-peripheral-wifi](https://github.com/STMicroelectronics/hardware-peripheral-wifi.git) | wifi hardware interface
+[hardware-hdmi-cec](https://github.com/STMicroelectronics/hardware-hdmi-cec.git) | HDMI CEC hardware interface
+[hardware-interfaces](https://github.com/STMicroelectronics/hardware-interfaces.git) | proprietary hardware interface definition and default implementation
+[copro-services](https://github.com/STMicroelectronics/copro-services.git) | proprietary copro service (used to send/receive commands to coprocessor
 [vendor-stm-app](https://github.com/STMicroelectronics/vendor-stm-app.git) | application and firmware packages
 
 Other MPU Packages | Description
