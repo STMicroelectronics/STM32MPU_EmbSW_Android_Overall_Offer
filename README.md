@@ -13,13 +13,14 @@ In this context, the Android™ certifications are not insured.
 * A STM32Cube Package, running on the Arm® Cortex®-M processor : [STM32Cube package](https://wiki.st.com/stm32mpu/wiki/Category:STM32Cube_MPU_Packages)
 
 **OpenSTDroid** includes the following collection of software components:
-* OpenSTLinux BSP (OP-TEE secure OS, boot chain and Linux kernel):
+* OpenSTDroid adopts the M33-TD flavor architecture. It is based on the FwST-M BSP
+  * The boot chain and secure services based on TF-M
+* OpenSTLinux BSP
   * The boot chain based on TF-A and U-Boot
-  * The OP-TEE secure OS running on the Cortex®-A in secure mode
   * The Linux kernel running on the Cortex®-A in non-secure mode
-* Application frameworks composed of middleware components relying on the BSP and providing a set of APIs:
+* Trusty secure OS running on the Cortex®-A in secure mode
+* Application frameworks composed of middleware components relying on the BSP and providing a set of APIs
   * Android APIs to run Applications that typically interact with the user via a display or a touchscreen.
-  * OP-TEE APIs to run Trusted Applications (TA) that allow manipulating secrets (information not visible from Linux® and from the STM32Cube MPU Package)
 
 **STM32Cube™** is a comprehensive embedded software libraries and drivers, delivered for each STM32 series.
    * The CMSIS modules (core and device) corresponding to the Arm® core implemented in this STM32 product
@@ -36,12 +37,17 @@ This repo is a simple Readme describing all STM32MPU related GitHub projects, th
 OpenSTDroid Packages | Description
 ----------------------------- | -----------
 [android-manifest](https://github.com/STMicroelectronics/android-manifest) | STM32MPU Embedded Software for Android overall manifest
+[device-stm-system](https://github.com/STMicroelectronics/device-stm-system.git) | BSP (TF-M and MCUBoot bootloader)
+[external-dt-android](https://github.com/STMicroelectronics/external-dt-android.git) | BSP (device tree for the different part of the BSP)
+[keys-android](https://github.com/STMicroelectronics/keys-android.git) | development keys (RPMB test key and example of device master key)
 [device-stm-bootloader](https://github.com/STMicroelectronics/device-stm-bootloader.git) | BSP (TF-A and U-Boot bootloader)
 [stm32-ddr-phy-binary](https://github.com/STMicroelectronics/stm32-ddr-phy-binary.git) | DDR firmware binaries
 [fiptool](https://github.com/STMicroelectronics/fiptool.git) | FIP generation tool
 [device-stm-kernel](https://github.com/STMicroelectronics/device-stm-kernel.git) | BSP (Linux kernel)
-[device-stm-tee](https://github.com/STMicroelectronics/device-stm-tee.git) | BSP (OP-TEE)
+[device-stm-tee](https://github.com/STMicroelectronics/device-stm-tee.git) | BSP (OP-TEE or Trusty depending on version)
 [device-stm-openocd](https://github.com/STMicroelectronics/device-stm-openocd.git) | BSP (openocd for debug)
+[trusty-device-st](https://github.com/STMicroelectronics/trusty-device-st.git) | BSP (trusty project for STM32MPU)
+[trusty-hardware-st](https://github.com/STMicroelectronics/trusty-hardware-st.git) | BSP (trusty hardware for STM32MPU)
 [device-stm-common](https://github.com/STMicroelectronics/device-stm-common.git) | STM32MPU configuration
 [device-stm-eval](https://github.com/STMicroelectronics/device-stm-eval.git) | STM32MPU evaluation board configuration
 [device-stm-dk](https://github.com/STMicroelectronics/device-stm-dk.git) | STM32MPU discovery board configuration
@@ -57,6 +63,7 @@ OpenSTDroid Packages | Description
 [hardware-peripheral-usb](https://github.com/STMicroelectronics/hardware-peripheral-usb.git) | usb hardware interface
 [hardware-peripheral-wifi](https://github.com/STMicroelectronics/hardware-peripheral-wifi.git) | wifi hardware interface
 [hardware-hdmi-cec](https://github.com/STMicroelectronics/hardware-hdmi-cec.git) | HDMI CEC hardware interface
+[hardware-neuralnetworks](https://github.com/STMicroelectronics/hardware-neuralnetworks.git) | Neural Networks delegate libraries
 [hardware-interfaces](https://github.com/STMicroelectronics/hardware-interfaces.git) | proprietary hardware interface definition and default implementation
 [copro-services](https://github.com/STMicroelectronics/copro-services.git) | proprietary copro service (used to send/receive commands to coprocessor
 [vendor-stm-app](https://github.com/STMicroelectronics/vendor-stm-app.git) | application and firmware packages
@@ -64,7 +71,6 @@ OpenSTDroid Packages | Description
 Other MPU Packages | Description
 ---------------------- | -----------
 [STM32CubeMP2](https://github.com/STMicroelectronics/STM32CubeMP2) | STM32MP2 Cube running in non secure M33 context
-[trusted-firmware-m](https://github.com/STMicroelectronics/trusted-firmware-m) | STM32MP2 Trusted Firmware-M running in secure M33 context
 
 ### STM32MPU Tools packages 
 STM32MPU Packages | Description
@@ -76,4 +82,4 @@ STM32MPU Packages | Description
 ## Communication and support 
 For communication and support, you can use
 * [ST Support Center](https://my.st.com/ols#/ols/) for any defect
-* [ST Community MPU](https://community.st.com/s/topic/0TO0X0000003u2AWAQ/stm32-mpus) forum 
+* [ST Community MPU](https://community.st.com/stm32-mpus-38) forum
